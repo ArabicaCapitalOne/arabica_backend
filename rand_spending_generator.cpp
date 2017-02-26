@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <vector>
 #include <fstream>
+#include <cstdio>
 
 using namespace std;
 
@@ -10,7 +11,8 @@ void output(int year, int month, int day, vector<string> &merchant_id) {
 	int index = rand() % 300;
 	cout << " \"merchant_id\": " << "\"" << merchant_id[index] << "\"," << endl;
 	cout << " \"medium\": " << "\"balance\"," << endl;
-	cout << " \"purchase_date\": " << "\"" << year << "-" << month << "-" << day << "\",\n";
+	printf(" \"purchase_date\": \"%d-%02d-%02d\",\n", year, month, day);
+	// cout << " \"purchase_date\": " << "\"" << year << "-" << month << "-" << day << "\",\n";
 	int a = rand() % 50;
 	int b = rand() % 10;
 	int c = rand() % 10;
@@ -36,11 +38,11 @@ int main (){
 			int num = rand() % 50 + 10;
 			for (int count = 0; count < num; ++count) {
 				int day = 0;
-				if (month == 2) 
+				if (month == 2)
 					day = rand() % 28 + 1;
 				else if (month==4 || month==6 || month==9 || month==11)
 					day = rand() % 30 + 1;
-				else 
+				else
 					day = rand() % 31 + 1;
 				output (year, month, day, merchant_id);
 			}
