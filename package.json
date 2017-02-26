@@ -1,0 +1,29 @@
+{
+  "name": "arabica",
+  "version": "1.0.0",
+  "description": "A new generation of personal finance management system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArabicaCapitalOne/arabica_backend.git"
+  },
+  "keywords": [
+    "personal",
+    "finance",
+    "finance",
+    "management",
+    "capital",
+    "one",
+    "paypal",
+    "chase"
+  ],
+  "author": "Guocheng Wei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArabicaCapitalOne/arabica_backend/issues"
+  },
+  "homepage": "https://github.com/ArabicaCapitalOne/arabica_backend#readme"
+}
