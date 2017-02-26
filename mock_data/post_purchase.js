@@ -3,9 +3,9 @@ var querystring = require('querystring');
 var http = require('http');
 var fs = require('fs');
 
-function PostCode(postData) {
+function PostCode(jsonData) {
 	// An object of options to indicate where to post to
-	var postData = querystring.stringify(jsonData);
+	var postData = JSON.stringify(jsonData);
 	var accountID = "58a981581756fc834d905a55";
 	var APIKEY = "df8a613cd6635b6513d8050b63b13dde";
 	var post_options = {
@@ -13,9 +13,10 @@ function PostCode(postData) {
 		port: 80,
 		path: '/accounts/' + accountID + '/purchases?key=' + APIKEY,
 		method: 'POST',
+		body: postData,
+		family: 4,
 		headers: {
 			'Content-Type': 'application/json',
-			'Content-Length': Buffer.byteLength(postData)
 		}
 	};
 

@@ -25,6 +25,7 @@ void output(int year, int month, int day, vector<string> &merchant_id) {
 
 int main (){
 
+
 	vector<string> merchant_id;
 	ifstream fin("test.txt");
 	string id;
@@ -32,7 +33,7 @@ int main (){
 		merchant_id.push_back(id);
 	}
 
-
+	cout << "[\n";
 	for (int year = 2012; year < 2017; ++year) {
 		for (int month = 1; month <= 12; ++month) {
 			int num = rand() % 50 + 10;
@@ -48,6 +49,7 @@ int main (){
 			}
 		}
 	}
+	cout << "\n]\n";
 
 	return 0;
 }
